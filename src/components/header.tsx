@@ -23,9 +23,9 @@ export default  function Header(){
              <ul className="pr-5 hidden md:block">
                <li className="space-x-5">
                 <Link href={"/"}>Home</Link>
-                <Link href={"/class6"}>class6</Link>
+                <Link href={"/class8"}>class8</Link>
                 <Link href={"/pro-list"}>Pro-List</Link>
-                <Link href={""}>Blog</Link>
+                <Link href={"/class9"}>class9</Link>
                 <Button variant={"outline"} className="bg-yellow-300">Hire Me!</Button>
                </li>
              </ul>

@@ -1,5 +1,6 @@
 
 "use client"
+import Counter from '@/app/class8/page'
 import { Button } from '@/components/ui/button'
 import { Check } from 'lucide-react'
 import Image from 'next/image'
@@ -54,6 +55,7 @@ function Pro_detail({params}:{params:{id:string}}) {
       return <h2 className='text-2xl font-bold'>Product Not Found</h2>
     }
   return (
+    <>
     <div className='w-full h-[700px] mt-10 flex flex-col md:flex-row justify-center items-start'>
 
        <Image src={item.imgurl} 
@@ -80,6 +82,8 @@ function Pro_detail({params}:{params:{id:string}}) {
        <Button>Add to cart</Button>
         </div>
     </div>
+     <Counter/>
+    </>
   )
 }
 

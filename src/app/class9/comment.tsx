@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-
 function Comment_section() {
     const [comment,setcomment] = useState([""]);
     const [newcomment,setnewcomment] = useState("");

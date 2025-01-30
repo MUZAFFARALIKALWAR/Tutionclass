@@ -1,5 +1,4 @@
 import { GiHamburgerMenu } from "react-icons/gi";
-
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import {
@@ -10,6 +9,7 @@ import {
     SheetTitle,
     SheetTrigger,
   } from "@/components/ui/sheet"
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
   
 
 export default  function Header(){
@@ -18,6 +18,10 @@ export default  function Header(){
              {/* logo */}
              <div>
                <h1 className="text-4xl font-bold">MA.</h1>
+               <SignedIn>
+               <UserButton />
+             </SignedIn>
+
              </div>
              {/* Navlinks*/}
              <ul className="pr-5 hidden md:block">
@@ -26,12 +30,15 @@ export default  function Header(){
                 <Link href={"/class8"}>class8</Link>
                 <Link href={"/pro-list"}>Pro-List</Link>
                 <Link href={"/class9"}>class9</Link>
+                  <SignedOut>
+                   <SignInButton />
+                   </SignedOut>
                 <Button variant={"outline"} className="bg-yellow-300">Hire Me!</Button>
                </li>
              </ul>
                <div className="md:hidden">
                <Sheet>
-  <SheetTrigger className="md:hidden">
+ <SheetTrigger className="md:hidden">
      <GiHamburgerMenu />
   </SheetTrigger>
   <SheetContent>
